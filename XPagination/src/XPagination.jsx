@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from './XPagination.module.css';
+import styles from "./XPagination.module.css";
 
 const App = () => {
   const [members, setMembers] = useState([]);
@@ -41,7 +41,7 @@ const App = () => {
       <h1>Employee Data Table</h1>
       <table className={styles.tbHead}>
         <thead className={styles.hrow}>
-          <tr >
+          <tr>
             <th>ID</th>
             <th>Name</th>
             <th>Email</th>
@@ -59,14 +59,15 @@ const App = () => {
           ))}
         </tbody>
       </table>
-      <div >
-        <button onClick={prevPage} disabled={currentPage === 1}>
+      <div>
+        <button onClick={prevPage} disabled={currentPage === 1} force={true}>
           Previous
         </button>
         <button>{currentPage}</button>
         <button
           onClick={nextPage}
           disabled={currentPage === Math.ceil(members.length / itemsPerPage)}
+          force={true}
         >
           Next
         </button>
