@@ -60,14 +60,14 @@ const App = () => {
         </tbody>
       </table>
       <div>
-        <button onClick={prevPage} disabled={currentPage === 1} force={true}>
+        <button onClick={prevPage} disabled={currentPage === 1} {force=true}>
           Previous
         </button>
         <button>{currentPage}</button>
         <button
           onClick={nextPage}
           disabled={currentPage === Math.ceil(members.length / itemsPerPage)}
-          force={true}
+          {force=true}
         >
           Next
         </button>
