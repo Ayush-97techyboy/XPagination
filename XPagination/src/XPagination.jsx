@@ -60,17 +60,9 @@ const App = () => {
         </tbody>
       </table>
       <div>
-        <button onClick={prevPage} disabled={currentPage === 1} {force=true}>
-          Previous
-        </button>
+        <button onClick={prevPage}>Previous</button>
         <button>{currentPage}</button>
-        <button
-          onClick={nextPage}
-          disabled={currentPage === Math.ceil(members.length / itemsPerPage)}
-          {force=true}
-        >
-          Next
-        </button>
+        <button onClick={nextPage}>Next</button>
       </div>
     </div>
   );
